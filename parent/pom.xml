@@ -179,8 +179,8 @@
 		can happen that they need to have different values, hence 2 properties -->
 		<discovery.tpc.version>${TARGET_PLATFORM_CENTRAL_MAX}</discovery.tpc.version>
 		
-		<sonar.maven.plugin.version>3.3.0.603</sonar.maven.plugin.version>
-		<jacoco.version>0.7.1.201405082137</jacoco.version>
+		<sonar.maven.plugin.version>3.6.0.1398</sonar.maven.plugin.version>
+		<jacoco.version>0.8.4</jacoco.version>
 
 		<!-- properties used by jdeps profile -->
 		<jdeps-jdk-version>1.8</jdeps-jdk-version>
@@ -853,7 +853,6 @@ hs_err_pid*.log</jgit.ignore>
 				<jdeps-jdk-version>9</jdeps-jdk-version>
 				<jdeps-jdk-vendor>openjdk</jdeps-jdk-vendor>
 				<moduleProperties>--add-modules=ALL-SYSTEM</moduleProperties>
-				<jacoco.version>0.8.0</jacoco.version>
 			</properties>
 		</profile>
 
@@ -868,7 +867,6 @@ hs_err_pid*.log</jgit.ignore>
 				<!-- https://redhat.service-now.com/surl.do?n=PNT0276816 -->
 				<jdeps-jdk-vendor>oraclejdk</jdeps-jdk-vendor>
 				<moduleProperties>--add-modules=ALL-SYSTEM</moduleProperties>
-				<jacoco.version>0.8.1</jacoco.version>
 			</properties>
 		</profile>
 
@@ -881,7 +879,6 @@ hs_err_pid*.log</jgit.ignore>
 				<jdeps-jdk-version>11</jdeps-jdk-version>
 				<jdeps-jdk-vendor>openjdk</jdeps-jdk-vendor>
 				<moduleProperties>--add-modules=ALL-SYSTEM</moduleProperties>
-				<jacoco.version>0.8.2</jacoco.version>
 			</properties>
 		</profile>
 
@@ -894,7 +891,6 @@ hs_err_pid*.log</jgit.ignore>
 				<jdeps-jdk-version>12</jdeps-jdk-version>
 				<jdeps-jdk-vendor>openjdk</jdeps-jdk-vendor>
 				<moduleProperties>--add-modules=ALL-SYSTEM</moduleProperties>
-				<jacoco.version>0.8.2</jacoco.version>
 			</properties>
 		</profile>
 

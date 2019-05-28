@@ -49,8 +49,6 @@
 		<applejdkProperties></applejdkProperties>
 		<moduleProperties></moduleProperties>
 		<maven.antrun.plugin.version>1.8</maven.antrun.plugin.version>
-		<!-- Default coverage filter, to be overriden when necessary -->
-		<coverage.filter>org.jboss.tools.*</coverage.filter>
 		<update.site.name>JBoss Tools - ${project.artifactId}</update.site.name>
 		<!-- In the update site's site/pom.xml (that calls jbosstools-maven-plugins/tycho-plugins/repository-utils)
 				 you can override this value to be Nightly Build, Development Milestone, or Stable Release, or set to &amp;shy; (soft hyphen) to leave blank -->
@@ -77,9 +75,6 @@
 		<!-- Unit Test and Integration Test timeouts in seconds -->
 		<surefire.timeout>2400</surefire.timeout>
 		<surefire.itests.timeout>${surefire.timeout}</surefire.itests.timeout>
-		<!-- Where to put jacoco coverage report, basically in the target/ folder at the top-level for each component -->
-		<!-- For multi-modules "chunks", set it to '../../../target/jacoco.exec' in their root pom -->
-		<jacoco.destFile>../../target/jacoco.exec</jacoco.destFile>
 		<!-- Default properties for Java runtimes to be used and set during testing, eg., /qa/tools/opt/jdk1.8.0_last/ or /opt/jdk1.7.0_17/
 				These properties will be set when running in Jenkins, but you can set them in your settings.xml too.
 				Not recommended that you set default values in your root or test poms as they are machine specific. -->
@@ -353,9 +348,6 @@ hs_err_pid*.log</jgit.ignore>
 							<goal>prepare-agent</goal>
 						</goals>
 						<configuration>
-							<includes>
-								<include>${coverage.filter}</include>
-							</includes>
 							<!-- Merge reports from all executions -->
 							<append>true</append>
 						</configuration>
